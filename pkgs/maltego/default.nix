@@ -22,6 +22,8 @@ stdenv.mkDerivation rec {
   mkdir $out
   mkdir $out/{bin,etc,groovy,ide,java,maltegp,maltego-core-platform,maltego-ui,platform}
   cp -rv * $out
+  rm -rv $out/debian
+  chmod +x $out/bin/maltego
 '';
   meta = with lib; {
     description = "Maltego is a comprehensive tool for graphical link analyses that offers real-time data mining and information gathering, as well as the representation of this information on a node-based graph, making patterns and multiple order connections between said information easily identifiable.";
