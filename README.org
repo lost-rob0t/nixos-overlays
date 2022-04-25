@@ -1,0 +1,5 @@
+#+TITLE: Readme
+
+* About this overlay
+This is my personal overlay where any tool i use is built
+also i find that nixpkgs for certain things like i2p is ab it slow (nix-unstable still on 1.6.1) and its mportant that you run the latest version for this software.
