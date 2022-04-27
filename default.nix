@@ -6,4 +6,5 @@ in
 
   i2p = callPackage ./pkgs/i2p/default.nix { };
   maltego = callPackage ./pkgs/maltego/default.nix { };
+  clouseau = callPackage ./pkgs/clouseau/default.nix {  };
 }

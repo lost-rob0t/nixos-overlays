@@ -5,4 +5,5 @@ in
 {
   i2p = mypkgs.i2p;
   maltego = mypkgs.i2p;
+  clouseau = mypkgs.clouseau;
 }
