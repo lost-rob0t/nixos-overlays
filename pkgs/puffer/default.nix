@@ -1,4 +1,4 @@
-{ lib, stdenv, nimPackages, fetchurl }:
+{ lib, nimPackages, fetchurl }:
 
 let
   cligen = nimPackages.buildNimPackage rec {
@@ -12,7 +12,8 @@ let
 
 
   };
-puffer = nimPackages.buildNimPackage rec {
+in
+nimPackages.buildNimPackage rec {
   name = "puffer";
   rev = "d0c7d6a9a9e48e31eb24807f8a24118bc19c031c";
 
@@ -25,16 +26,11 @@ puffer = nimPackages.buildNimPackage rec {
   buildInputs = with nimPackages; [
     cligen
   ];
-};
 
-in
-  stdenv.mkDerivation rec {
-    pname = "puffer";
-    buildInputs = [ puffer ];
-    meta = with lib; {
+  meta = with lib; {
     description = "count puffs";
     homepage = "https://github.com/lost-rob0t/puffer.ni,";
     license = licenses.mit;
     maintainers = [ "nsaspy" ];
-    };
-  }
+  };
+}
