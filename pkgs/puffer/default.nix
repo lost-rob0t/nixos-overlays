@@ -1,5 +1,5 @@
 { lib, stdenv, nimPackages, fetchurl }:
-
+## TODO FIX see nimsuggest
 let
   cligen = nimPackages.buildNimPackage rec {
     name = "cligen";
@@ -30,6 +30,7 @@ puffer = nimPackages.buildNimPackage rec {
 in
   stdenv.mkDerivation rec {
     pname = "puffer";
+    version = "0.1.0";
     buildInputs = [ puffer ];
     meta = with lib; {
     description = "count puffs";

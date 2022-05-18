@@ -8,4 +8,5 @@ in
   maltego = callPackage ./pkgs/maltego/default.nix { };
   clouseau = callPackage ./pkgs/clouseau/default.nix {  };
   puffer = callPackage ./pkgs/puffer/default.nix {  };
+  nimsuggest = callPackage ./pkgs/nimsuggest/default.nix {  };
 }
