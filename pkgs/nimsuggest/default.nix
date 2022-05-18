@@ -1,6 +1,6 @@
-{ lib, buildNimPackage, fetchFromGitHub, pkgs }:
+{ lib, nimPackages, fetchFromGitHub, pkgs }:
 
-buildNimPackage rec {
+nimPackages.buildNimPackage rec {
   pname = "nimsuggest";
   version = "0.1.0";
   src = fetchFromGitHub {
